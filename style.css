@@ -181,9 +181,18 @@ img {
 }
 
 .hero-subtext {
-  margin: 0 0 18px;
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* Mobile optimisation */
+@media (max-width: 768px) {
+  .hero-subtext {
+    text-align: left;   /* Prevent uneven spacing on small screens */
+    line-height: 1.5;
+  }
 }
 
 .hero-actions {
