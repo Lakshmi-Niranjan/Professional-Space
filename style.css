@@ -1,118 +1,62 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0a1128;
+  font-family: Poppins, sans-serif;
+  background: #020617;
   color: #f1f5f9;
 }
 
-.container {
-  max-width: 1100px;
+.container { max-width: 1100px; margin: auto; padding: 20px; }
+
+/* PROFILE IMAGE - ROUND + LARGE */
+.profile-photo-ring {
+  width: 200px;
+  height: 200px;
   margin: auto;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #2563eb, #f97316);
+  box-shadow: 0 0 25px rgba(37,99,235,0.6);
+}
+
+.profile-photo-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #020617;
+}
+
+.profile-card {
+  text-align: center;
+  background: #0f172a;
   padding: 20px;
+  border-radius: 20px;
 }
 
-.header {
-  position: fixed;
-  width: 100%;
-  background: #020617;
-  padding: 10px 0;
-  z-index: 100;
-}
-
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.nav a {
-  margin-left: 20px;
-  color: #cbd5f5;
-  text-decoration: none;
-}
-
-.hero {
-  padding-top: 120px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 12px;
-  border: 3px solid #3b82f6;
-}
-
+/* BUTTONS */
 .btn {
   padding: 10px 20px;
-  border-radius: 30px;
-  margin-right: 10px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .primary {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
   color: white;
 }
 
-.outline {
-  border: 1px solid #3b82f6;
+.ghost {
+  border: 1px solid #38bdf8;
 }
 
-.section {
-  padding: 60px 0;
-}
-
-.alt {
-  background: #020617;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.skill-box {
-  background: #111827;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.timeline li {
-  margin-bottom: 10px;
-}
-
-.testimonials blockquote {
-  background: #111827;
-  padding: 20px;
-  border-left: 4px solid #3b82f6;
-  margin-bottom: 20px;
-}
-
+/* FLOAT WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  color: white;
   padding: 15px;
   border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
+  color: white;
 }
