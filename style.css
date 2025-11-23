@@ -768,7 +768,7 @@ blockquote {
   display: flex;
   gap: 18px;
   width: max-content;                 /* allow track to be wider than container */
-  animation: testimonials-scroll 55s linear infinite;
+  animation: testimonials-scroll 48s linear infinite;
 }
 
 /* Pause on hover */
