@@ -629,4 +629,35 @@ blockquote {
 .testimonials-marquee {
   margin-left: 0 !important;
 }
+.profile-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 1rem;
+}
+
+/* Brand colours */
+.profile-icons .gmail i {
+  color: #EA4335;
+}
+
+.profile-icons .whatsapp i {
+  color: #25D366;
+}
+
+.profile-icons .linkedin i {
+  color: #0A66C2;
+}
+
+/* Hover glow */
+.profile-icons a:hover {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.08),
+              0 6px 18px rgba(0,0,0,0.5);
+}
+
 
