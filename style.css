@@ -480,11 +480,12 @@ blockquote {
   display: flex;
   gap: 18px;
   width: max-content;
-  animation: testimonials-scroll 35s linear infinite;
+  animation: testimonials-scroll 40s linear infinite;
 }
 
-/* Pause on hover */
-.testimonials-marquee:hover .marquee-track {
+/* Pause on hover – FIXED */
+.testimonials-marquee:hover .marquee-track,
+.marquee-track:hover {
   animation-play-state: paused;
 }
 
