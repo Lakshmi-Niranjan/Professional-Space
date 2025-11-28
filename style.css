@@ -671,3 +671,21 @@ blockquote {
     grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
   }
 }
+/* Auto slider for testimonials */
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
