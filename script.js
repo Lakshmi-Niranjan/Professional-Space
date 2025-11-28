@@ -42,3 +42,14 @@ if (marquee && wrapper) {
     marquee.style.animationPlayState = 'running';
   });
 }
+let slides = document.querySelectorAll('.testimonials-slider .slide');
+let currentSlide = 0;
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 6000); // change every 6 seconds
+
