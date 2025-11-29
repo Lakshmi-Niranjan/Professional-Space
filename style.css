@@ -672,5 +672,8 @@ blockquote {
     grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
   }
 }
-
+.real-gmail-icon {
+  width: 20px;
+  height: 20px;
+}
 
