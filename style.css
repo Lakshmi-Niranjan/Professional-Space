@@ -676,4 +676,12 @@ blockquote {
   width: 18px;
   height: 18px;
 }
+/* Nav menu font colour */
+.nav a {
+  color: #F3FFA3 !important;
+}
+.nav a:hover {
+  color: #ffffff !important;
+}
+
 
