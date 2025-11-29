@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://Lakshmi-Niranjan.github.io/sitemap.xml
