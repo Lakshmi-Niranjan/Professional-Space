@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery | Lakshmi Niranjan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      padding-top: 72px;
+      background: #020617;
+      color: #fff;
+      font-family: "Poppins";
+    }
+
+    .gallery-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .gallery-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #F3FFA3;
+      display: inline-block;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 16px;
+      background: #1d4ed8;
+      color: white;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .back-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    /* GRID layout */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Toggle button */
+    .toggle-btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0ea5e9;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .toggle-btn:hover {
+      background: #38bdf8;
+    }
+
+    /* Slider view (hidden initially) */
+    .slider-view {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .slider-view img {
+      max-width: 90%;
+      max-height: 70vh;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .slider-controls {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slider-controls button {
+      padding: 8px 16px;
+      background: #1f2937;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .slider-controls button:hover {
+      background: #374151;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="gallery-container">
+
+    <a href="index.html#gallery" class="back-btn">← Back to Home</a>
+    <h2 class="gallery-title">Program Gallery</h2>
+
+    <!-- Toggle Button -->
+    <div class="toggle-btn" onclick="toggleView()">Switch: Grid / Slider View</div>
+
+    <!-- GRID VIEW -->
+    <div class="gallery-grid" id="gridView">
+      <img src="images/program1.jpg" onclick="openSlider(0)">
+      <img src="images/program2.jpg" onclick="openSlider(1)">
+      <img src="images/program3.jpg" onclick="openSlider(2)">
+      <img src="images/program4.jpg" onclick="openSlider(3)">
+      <img src="images/program5.jpg" onclick="openSlider(4)">
+      <img src="images/program6.jpg" onclick="openSlider(5)">
+      <img src="images/program7.jpg" onclick="openSlider(6)">
+      <img src="images/program8.jpg" onclick="openSlider(7)">
+      <img src="images/program9.jpg" onclick="openSlider(8)">
+      <img src="images/program10.jpg" onclick="openSlider(9)">
+    </div>
+
+    <!-- SLIDER VIEW -->
+    <div class="slider-view" id="sliderView">
+      <img id="sliderImage" src="">
+      <div class="slider-controls">
+        <button onclick="prevImage()">⟨ Prev</button>
+        <button onclick="nextImage()">Next ⟩</button>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  let currentIndex = 0;
+  const images = [
+    "images/program1.jpg",
+    "images/program2.jpg",
+    "images/program3.jpg",
+    "images/program4.jpg",
+    "images/program5.jpg",
+    "images/program6.jpg",
+    "images/program7.jpg",
+    "images/program8.jpg",
+    "images/program9.jpg",
+    "images/program10.jpg"
+  ];
+
+  function toggleView() {
+    const grid = document.getElementById("gridView");
+    const slider = document.getElementById("sliderView");
+
+    if (grid.style.display !== "none") {
+      grid.style.display = "none";
+      slider.style.display = "block";
+      openSlider(0);
+    } else {
+      slider.style.display = "none";
+      grid.style.display = "grid";
+    }
+  }
+
+  function openSlider(i) {
+    currentIndex = i;
+    document.getElementById("sliderImage").src = images[i];
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    openSlider(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    openSlider(currentIndex);
+  }
+</script>
+
+</body>
+</html>
