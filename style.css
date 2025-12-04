@@ -693,6 +693,35 @@ blockquote {
   max-width: 100% !important;
   width: 100% !important;
 }
+/* ==== EMERGENCY: Undo gallery/layout break (temporary) ==== */
+
+/* Hide gallery/slider/lightbox elements if accidentally injected into index.html */
+#lightbox,
+#sliderView,
+#gallerySwiper,
+.swiper,
+.gallery-controls,
+.gallery-grid,
+.program-images,
+.testimonials-swiper {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Ensure testimonials marquee is visible and running */
+.testimonials-marquee { display: block !important; visibility: visible !important; }
+.marquee-track { animation-play-state: running !important; transform: none !important; }
+
+/* Restore normal section spacing */
+.section { padding: 60px 0 !important; }
+
+/* Make sure header padding remains OK */
+body { padding-top: 72px !important; }
+
+/* Ensure images load visibly when correct path exists */
+img { opacity: 1 !important; display: block !important; }
+
 
 
 
