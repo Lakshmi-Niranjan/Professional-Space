@@ -9,15 +9,15 @@
 
   <style>
     body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Poppins", sans-serif;
-      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
-      color: #f9fafb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  margin: 0;
+  min-height: 100svh; /* FIX for mobile viewport */
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
     .launch-container {
       max-width: 720px;
@@ -123,7 +123,17 @@
         height: 130px;
       }
     }
-  </style>
+    /* Mobile vertical centering fix */
+@media (max-width: 520px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .launch-container {
+    margin-top: 12vh;
+  }
+}
+</style>
 </head>
 
 <body>
