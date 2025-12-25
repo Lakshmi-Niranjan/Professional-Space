@@ -25,18 +25,18 @@
       text-align: center;
     }
 
-    /* Photo */
+    /* PHOTO */
     .launch-photo {
       margin-bottom: 26px;
     }
 
-    /* Gradient photo frame */
+    /* Gradient photo frame – SAME as name gradient */
     .photo-frame {
       display: inline-flex;
-      padding: 4px; /* border thickness */
+      padding: 4px;
       border-radius: 22px;
-      background: linear-gradient(135deg, #8b5cf6, #f97316);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+      background: linear-gradient(120deg, #60a5fa, #F3FFA3);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
     }
 
     .photo-frame img {
@@ -45,9 +45,10 @@
       object-fit: cover;
       border-radius: 18px;
       background: #020617;
+      display: block;
     }
 
-    /* Heading */
+    /* HEADING */
     .welcome-title {
       font-size: 1.6rem;
       font-weight: 600;
@@ -69,7 +70,7 @@
       margin-bottom: 30px;
     }
 
-    /* CTA buttons */
+    /* CTA BUTTONS */
     .cta-buttons {
       display: flex;
       gap: 16px;
@@ -97,9 +98,10 @@
 
     .cta-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 22px 46px rgba(15, 23, 42, 0.8);
+      box-shadow: 0 22px 46px rgba(15, 23, 42, 0.85);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 520px) {
       .cta-buttons {
         flex-direction: column;
