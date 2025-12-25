@@ -9,15 +9,15 @@
 
   <style>
     body {
-  margin: 0;
-  min-height: 100svh; /* FIX for mobile viewport */
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
-  color: #f9fafb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      margin: 0;
+      min-height: 100svh;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
+      color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .launch-container {
       max-width: 720px;
@@ -27,10 +27,9 @@
 
     /* PHOTO */
     .launch-photo {
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
 
-    /* Gradient photo frame – SAME as name gradient */
     .photo-frame {
       display: inline-flex;
       padding: 4px;
@@ -53,7 +52,7 @@
       font-size: 1.6rem;
       font-weight: 600;
       line-height: 1.45;
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       letter-spacing: 0.3px;
     }
 
@@ -67,7 +66,21 @@
     .welcome-subtext {
       font-size: 0.9rem;
       color: #9ca3af;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
+    }
+
+    /* DATE & QUOTE */
+    .date-text {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .quote-text {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #e5e7eb;
+      margin-bottom: 28px;
     }
 
     /* CTA BUTTONS */
@@ -75,7 +88,6 @@
       display: flex;
       gap: 16px;
       justify-content: center;
-      margin-top: 12px;
     }
 
     .cta-btn {
@@ -101,8 +113,16 @@
       box-shadow: 0 22px 46px rgba(15, 23, 42, 0.85);
     }
 
-    /* RESPONSIVE */
+    /* MOBILE FIX */
     @media (max-width: 520px) {
+      body {
+        align-items: flex-start;
+      }
+
+      .launch-container {
+        margin-top: 12vh;
+      }
+
       .cta-buttons {
         flex-direction: column;
       }
@@ -123,17 +143,7 @@
         height: 130px;
       }
     }
-    /* Mobile vertical centering fix */
-@media (max-width: 520px) {
-  body {
-    align-items: flex-start;
-  }
-
-  .launch-container {
-    margin-top: 12vh;
-  }
-}
-</style>
+  </style>
 </head>
 
 <body>
@@ -158,6 +168,12 @@
       Please select the profile that you would like to explore.
     </div>
 
+    <!-- DATE -->
+    <div class="date-text" id="todayDate"></div>
+
+    <!-- QUOTE -->
+    <div class="quote-text" id="dailyQuote"></div>
+
     <!-- CTA BUTTONS -->
     <div class="cta-buttons">
       <a href="it-profile.html" class="cta-btn">IT Profile</a>
@@ -165,6 +181,33 @@
     </div>
 
   </div>
+
+  <!-- SCRIPT: DATE & QUOTES -->
+  <script>
+    const quotes = [
+      "The mind is everything. What you think you become",
+      "Influence grows when actions speak before words.",
+      "Time in the market beats timing the market.",
+      "Knowledge compounds faster than money.",
+      "When your prayers are not answered, remember: The teacher doesn’t talk during the test.”,
+      "Markets reward patience more than intelligence.",
+      "Clarity in thought leads to confidence in action.",
+      "Success is a journey, Not a destination.",
+      "In life direction is more important than speed.",
+      "Happiness is a state of mind.",
+      "Thinking starts success, doing completes it.",
+      "Trust the process, not the noise.",
+      "Your habits decide your future.",
+      "When life puts you in the dark, you are being planted—not buried."
+    ];
+
+    const today = new Date();
+    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById("todayDate").innerText = today.toLocaleDateString("en-IN", options);
+
+    const quoteIndex = today.getDate() % quotes.length;
+    document.getElementById("dailyQuote").innerText = `"${quotes[quoteIndex]}"`;
+  </script>
 
 </body>
 </html>
