@@ -30,13 +30,21 @@
       margin-bottom: 26px;
     }
 
-    .launch-photo img {
+    /* Gradient photo frame */
+    .photo-frame {
+      display: inline-flex;
+      padding: 4px; /* border thickness */
+      border-radius: 22px;
+      background: linear-gradient(135deg, #8b5cf6, #f97316);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    .photo-frame img {
       width: 170px;
       height: 170px;
       object-fit: cover;
       border-radius: 18px;
-      border: 2px solid rgba(148,163,184,0.35);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+      background: #020617;
     }
 
     /* Heading */
@@ -108,7 +116,7 @@
         font-size: 1.3rem;
       }
 
-      .launch-photo img {
+      .photo-frame img {
         width: 130px;
         height: 130px;
       }
@@ -122,7 +130,9 @@
 
     <!-- PHOTO -->
     <div class="launch-photo">
-      <img src="Lak.jpg" alt="Lakshmi Niranjan">
+      <div class="photo-frame">
+        <img src="Lak.jpg" alt="Lakshmi Niranjan">
+      </div>
     </div>
 
     <!-- WELCOME TEXT -->
