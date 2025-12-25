@@ -6,19 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 
   <style>
+    :root {
+      --bg: #020617;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent: #f97316;
+      --primary: #2563eb;
+      --highlight: #F3FFA3;
+      --border: rgba(148,163,184,0.25);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background: #020617;
-      color: #f9fafb;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #020617);
+      color: var(--text-main);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .container {
       max-width: 1120px;
@@ -26,155 +36,204 @@
       padding: 0 16px;
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
 
     header {
       position: sticky;
       top: 0;
-      background: rgba(2, 6, 23, 0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(148,163,184,0.2);
-      z-index: 10;
+      z-index: 20;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav {
+      height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      height: 64px;
+      justify-content: space-between;
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .logo-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #60a5fa, #a855f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
       font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-      color: #F3FFA3;
     }
 
-    .nav a {
+    .nav-links a {
+      margin-left: 20px;
       font-size: 0.85rem;
-      color: #cbd5f5;
-      margin-left: 18px;
+      color: var(--highlight);
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
 
     .hero {
-      padding: 64px 0 56px;
+      padding: 64px 0 72px;
+      border-bottom: 1px solid var(--border);
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
+      grid-template-columns: 320px 1fr;
+      gap: 48px;
       align-items: center;
     }
 
-    /* PHOTO WITH GRADIENT RING */
+    /* LEFT CARD */
 
-    .photo-wrap {
-      width: 160px;
-      height: 160px;
-      padding: 4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7c3aed, #f97316);
+    .profile-card {
+      background: radial-gradient(circle at top, #1e293b 0%, #020617 70%);
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.8);
     }
 
-    .photo-wrap img {
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #a855f7, #f97316);
+    }
+
+    .profile-photo img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
+      border-radius: 50%;
       background: #020617;
     }
 
-    /* ICONS */
+    .profile-name {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .profile-role {
+      font-size: 0.8rem;
+      color: var(--highlight);
+      margin-bottom: 14px;
+    }
 
     .social-icons {
-      margin-top: 14px;
       display: flex;
-      gap: 14px;
       justify-content: center;
+      gap: 14px;
+      margin-bottom: 16px;
     }
 
     .social-icons a {
-      width: 34px;
-      height: 34px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      border: 1px solid rgba(148,163,184,0.4);
+      border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      color: #F3FFA3;
-      transition: 0.2s;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
     }
 
     .social-icons a:hover {
-      background: rgba(243,255,163,0.1);
-      transform: translateY(-2px);
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      border-color: transparent;
     }
 
-    /* TEXT */
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,0.8);
+    }
 
-    .hero h1 {
+    /* RIGHT CONTENT */
+
+    .hero-content h1 {
+      font-size: 2.2rem;
       margin: 0 0 10px;
-      font-size: 2rem;
-      font-weight: 600;
     }
 
-    .hero-role {
+    .hero-role-main {
       font-size: 1rem;
-      color: #F3FFA3;
-      margin-bottom: 12px;
+      color: var(--highlight);
+      margin-bottom: 14px;
       font-weight: 500;
     }
 
     .hero-summary {
-      font-size: 0.9rem;
-      color: #9ca3af;
-      line-height: 1.65;
-      max-width: 760px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 22px;
     }
 
-    /* SECTIONS */
+    .section-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.85rem;
+      color: #c7d2fe;
+    }
+
+    /* ================= SECTIONS ================= */
 
     section {
-      padding: 56px 0;
-      border-top: 1px solid rgba(148,163,184,0.15);
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     section h2 {
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       margin-bottom: 26px;
-      color: #e5e7eb;
-      letter-spacing: 0.3px;
+      position: relative;
     }
 
-    /* FOOTER */
+    section h2::after {
+      content: "";
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      display: block;
+      margin-top: 8px;
+      border-radius: 999px;
+    }
 
     footer {
-      padding: 22px 0;
+      padding: 20px 0;
       text-align: center;
       font-size: 0.75rem;
-      color: #9ca3af;
-      border-top: 1px solid rgba(148,163,184,0.15);
+      color: var(--text-muted);
     }
 
-    /* RESPONSIVE */
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
       }
-
-      .photo-wrap {
-        margin: 0 auto;
-      }
-
-      .social-icons {
+      .section-links {
         justify-content: center;
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -182,94 +241,87 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <div class="logo">LN</div>
-      <div>
-        <a href="launchpage.html">Home</a>
-        <a href="index.html">Training Profile</a>
-        <a href="#it-contact">Contact</a>
-      </div>
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-badge">LN</div>
+      Lakshmi Niranjan
     </div>
-  </header>
+    <div class="nav-links">
+      <a href="launchpage.html">Home</a>
+      <a href="index.html">Training Profile</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
+<section class="hero">
+  <div class="container hero-inner">
 
-      <!-- LEFT -->
-      <div>
-        <div class="photo-wrap">
-          <img src="Lak.jpg" alt="Lakshmi Niranjan">
-        </div>
-
-        <div class="social-icons">
-          <a href="https://wa.me/918525096140" title="WhatsApp">WA</a>
-          <a href="mailto:lkniranjan8@gmail.com" title="Email">@</a>
-          <a href="https://www.linkedin.com/in/niftyniru" target="_blank" title="LinkedIn">in</a>
-        </div>
+    <!-- LEFT CARD -->
+    <div class="profile-card">
+      <div class="profile-photo">
+        <img src="Lak.jpg" alt="Lakshmi Niranjan">
       </div>
 
-      <!-- RIGHT -->
-      <div>
-        <h1>Lakshmi Niranjan</h1>
-        <div class="hero-role">
-          Senior Business Analyst | BFSI | Capital Markets | Wealth Management
-        </div>
-        <p class="hero-summary">
-          IT professional with 10+ years of experience in BFSI and capital markets
-          domains, specializing in wealth management platforms, functional analysis,
-          UAT, stakeholder management, and regulatory-driven systems.
-          Strong exposure to end-to-end SDLC, business process optimization,
-          and data-driven decision support.
-        </p>
+      <div class="profile-name">Lakshmi Niranjan</div>
+      <div class="profile-role">Senior Business Analyst</div>
+
+      <div class="social-icons">
+        <a href="https://wa.me/918525096140"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:lkniranjan8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/niftyniru"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
 
+      <a href="resume.pdf" class="download-btn">Download Resume</a>
     </div>
-  </section>
 
-  <!-- CORE IT EXPERTISE -->
-  <section id="it-expertise">
-    <div class="container">
-      <h2>Core IT Expertise</h2>
+    <!-- RIGHT CONTENT -->
+    <div class="hero-content">
+      <h1>Lakshmi Niranjan</h1>
+      <div class="hero-role-main">
+        Senior Business Analyst | BFSI | Capital Markets | Wealth Management
+      </div>
+
+      <p class="hero-summary">
+        IT professional with 10+ years of experience in BFSI and capital markets domains,
+        specializing in wealth management platforms, functional analysis, UAT,
+        stakeholder management, and regulatory-driven systems.
+        Strong exposure to end-to-end SDLC, business process optimization,
+        and data-driven decision support.
+      </p>
+
+      <div class="section-links">
+        <a href="#it-expertise">Core IT Expertise</a>
+        <a href="#it-experience">Professional Experience</a>
+        <a href="#it-projects">Key Projects & Contributions</a>
+      </div>
     </div>
-  </section>
 
-  <!-- EXPERIENCE -->
-  <section id="it-experience">
-    <div class="container">
-      <h2>Professional Experience</h2>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="it-projects">
-    <div class="container">
-      <h2>Key Projects & Contributions</h2>
-    </div>
-  </section>
+<section id="it-expertise">
+  <div class="container">
+    <h2>Core IT Expertise</h2>
+  </div>
+</section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="it-certifications">
-    <div class="container">
-      <h2>Certifications & Credentials</h2>
-    </div>
-  </section>
+<section id="it-experience">
+  <div class="container">
+    <h2>Professional Experience</h2>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="it-contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <strong>lkniranjan8@gmail.com</strong></p>
-      <p>LinkedIn: <strong>linkedin.com/in/niftyniru</strong></p>
-    </div>
-  </section>
+<section id="it-projects">
+  <div class="container">
+    <h2>Key Projects & Contributions</h2>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © Lakshmi Niranjan | IT Profile
-  </footer>
+<footer>
+  © Lakshmi Niranjan | IT Profile
+</footer>
 
 </body>
 </html>
