@@ -706,6 +706,33 @@ ul.programs-list > li > h3 {
 ul.programs-list > li > p {
   color: #ffffff !important;   /* rest text white */
 }
+/* ================================ */
+/* Programs section – hover effects */
+/* ================================ */
+
+.programs-list li {
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease,
+              background 0.25s ease;
+}
+
+.programs-list li:hover {
+  transform: translateY(-6px);
+  border-color: rgba(254, 255, 130, 0.6); /* matches h3 colour */
+  box-shadow: 0 18px 40px rgba(254, 255, 130, 0.15);
+  background: linear-gradient(145deg, #0f172a, #050816);
+}
+
+/* h3 pop on hover */
+.programs-list li:hover > h3 {
+  text-shadow: 0 0 8px rgba(254, 255, 130, 0.6);
+}
+
+/* subtle text clarity */
+.programs-list li:hover > p {
+  opacity: 0.95;
+}
 
 
 
