@@ -733,6 +733,11 @@ ul.programs-list > li > p {
 .programs-list li:hover > p {
   opacity: 0.95;
 }
+/* Footer copyright highlight */
+.footer {
+  color: #F3FFA3 !important;
+}
+
 
 
 
