@@ -446,12 +446,17 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.programs-list h3 {
-  color: #0b5ed7;   /* blue */
+/* ✅ FIXED: h3 colour + higher specificity */
+.programs-list li h3 {
+  margin: 0 0 6px;                 /* reset browser margin */
+  font-size: 1.05rem;
   font-weight: 600;
+  color: #38bdf8 !important;       /* visible blue */
+  letter-spacing: 0.3px;
 }
 
-.programs-list p {
+/* Paragraphs */
+.programs-list li p {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
