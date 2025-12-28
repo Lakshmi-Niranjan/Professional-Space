@@ -447,8 +447,8 @@ img {
 }
 
 .programs-list h3 {
-  margin: 0 0 6px;
-  font-size: 1rem;
+  color: #0b5ed7;   /* blue */
+  font-weight: 600;
 }
 
 .programs-list p {
