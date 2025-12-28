@@ -703,6 +703,9 @@ ul.programs-list > li > h3 {
   color: #9DD8FF !important;
 }
 
+ul.programs-list > li > p {
+  color: #ffffff !important;   /* rest text white */
+}
 
 
 
