@@ -451,7 +451,7 @@ img {
   margin: 0 0 6px;                 /* reset browser margin */
   font-size: 1.05rem;
   font-weight: 600;
-  color: #9DD8FF;       /* visible blue */
+  color: #93c5fd;       /* visible blue */
   letter-spacing: 0.3px;
 }
 
@@ -700,7 +700,7 @@ blockquote {
 }
 /* 🔒 FINAL OVERRIDE – Programs H3 colour */
 ul.programs-list > li > h3 {
-  color: #9DD8FF !important;
+  color: #93c5fd !important;
 }
 
 ul.programs-list > li > p {
