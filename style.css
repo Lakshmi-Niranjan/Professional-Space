@@ -810,6 +810,64 @@ ul.programs-list > li > p {
   font-size: 1.05rem !important;
 }
 
+/* ========================================= */
+/* FINAL FORCE SCALE – PROFILE CARD (HERO)   */
+/* ========================================= */
+
+/* 1️⃣ Allow right column to grow */
+.hero-inner {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.7fr) !important;
+}
+
+/* 2️⃣ Force larger rectangle */
+.profile-card {
+  max-width: 460px !important;     /* ⬅️ BIGGER rectangle */
+  padding: 32px 28px 28px !important;
+  border-radius: 30px !important;
+
+  background: radial-gradient(
+    circle at top left,
+    #1d4ed8 0%,
+    #020617 72%
+  ) !important;
+
+  box-shadow: 0 34px 80px rgba(15, 23, 42, 0.9) !important;
+}
+
+/* 3️⃣ Increase circle proportionally */
+.profile-photo-ring {
+  width: 240px !important;
+  height: 240px !important;
+  margin-bottom: 18px !important;
+}
+
+/* 4️⃣ Name & role scale */
+.profile-card h3 {
+  font-size: 1.25rem !important;
+}
+
+.profile-card p {
+  font-size: 0.9rem !important;
+  margin-bottom: 16px !important;
+}
+
+/* 5️⃣ Icons scale */
+.profile-icons a {
+  width: 42px !important;
+  height: 42px !important;
+  font-size: 1.2rem !important;
+}
+@media (max-width: 900px) {
+  .hero-right {
+    justify-content: center !important;
+  }
+
+  .profile-card {
+    max-width: 92% !important;
+  }
+}
+
+
 
 
 
