@@ -763,6 +763,53 @@ ul.programs-list > li > p {
   font-size: 1.15rem;
 }
 
+/* =============================== */
+/* PROFILE CARD – VALUE ALIGNMENT */
+/* =============================== */
+
+/* Card container */
+.profile-card {
+  padding: 24px !important;
+  border-radius: 28px !important;
+  background: radial-gradient(circle at top left, #1d4ed8 0%, #020617 70%) !important;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(148, 163, 184, 0.35) !important;
+}
+
+/* Photo ring */
+.profile-photo-ring {
+  width: 210px !important;
+  height: 210px !important;
+  margin: 0 auto 16px !important;
+  padding: 4px !important;
+  background: linear-gradient(135deg, #a855f7, #f97316) !important;
+}
+
+/* Photo inside ring */
+.profile-photo-ring img {
+  background: #ffffff !important;
+}
+
+/* Name */
+.profile-card h3 {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+}
+
+/* Role / designation */
+.profile-card p {
+  font-size: 0.8rem !important;
+  margin: 6px 0 14px !important;
+  color: #F3FFA3 !important;
+}
+
+/* Icons */
+.profile-icons a {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 1.05rem !important;
+}
+
 
 
 
