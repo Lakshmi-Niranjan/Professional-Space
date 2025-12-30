@@ -844,6 +844,23 @@ ul.programs-list > li > p {
   box-shadow: 0 18px 40px rgba(254, 255, 130, 0.18);
   background: linear-gradient(145deg, #0f172a, #050816);
 }
+/* ===================================== */
+/* GLOBAL SECTION SPACING STANDARDIZATION */
+/* ===================================== */
+
+/* Default spacing for all sections */
+.section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Slightly tighter spacing on mobile */
+@media (max-width: 768px) {
+  .section {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
 
 
 
