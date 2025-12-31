@@ -144,7 +144,7 @@ header{
   max-width:780px;
 }
 
-/* BUTTON */
+/* BUTTON (old unused class – kept as-is) */
 .download-btn{
   display:inline-block;
   margin:16px 0;
@@ -246,17 +246,45 @@ footer{
   .hero-summary{text-align:left}
 }
 
-  .hero-actions-row {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-top: 22px;
-  flex-wrap: wrap;
+.hero-actions-row{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  margin-top:22px;
+  flex-wrap:wrap;
 }
 
 /* keep tabs inline */
-.section-tabs {
-  margin-top: 0 !important;
+.section-tabs{margin-top:0!important}
+
+/* ===================== */
+/* ADDED: PRIMARY BUTTON */
+/* ===================== */
+.btn.primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 26px;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:600;
+  color:#ffffff;
+  background:linear-gradient(135deg,#2563eb,#4f46e5);
+  box-shadow:0 14px 35px rgba(37,99,235,.55);
+  border:1px solid rgba(255,255,255,.15);
+  transition:all .35s ease;
+  white-space:nowrap;
+}
+
+.btn.primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 48px rgba(37,99,235,.75);
+  background:linear-gradient(135deg,#1e40af,#2563eb);
+}
+
+.btn.primary:focus{
+  outline:none;
+  box-shadow:0 0 0 3px rgba(37,99,235,.45);
 }
 </style>
 </head>
@@ -296,66 +324,45 @@ footer{
     <div>
       <h1>Lakshmi Niranjan</h1>
       <div class="hero-role">Senior Business Analyst | Capital Markets & Wealth Management</div>
-    <p class="hero-summary"> 
-   IT professional with 11+ years of experience in BFSI and capital markets domains, specializing in wealth management platforms and regulatory-driven financial systems. 
-   My expertise includes functional and business analysis, UAT coordination, requirement gathering, and stakeholder management across front-office, middle-office, and back-office processes.  
-      <br><br/> 
-  I have worked extensively on investment products such as equities, mutual funds, ETFs, and advisory platforms, ensuring system compliance with regulatory norms, operational accuracy, and seamless user experience. 
-   I collaborate closely with business users, developers, and QA teams to translate complex financial requirements into scalable technology solutions. 
-    </p>
-      
-   <div class="hero-actions-row">
-  <a class="btn primary" href="Lakshmi_Niranjan_CV.pdf" target="_blank">
-    Download Resume
-  </a>
 
-  <div class="section-tabs">
-    <a href="#experience">Professional Experience</a>
-    <a href="#projects">Key Projects & Contributions</a>
-    <a href="#certifications">Certifications</a>
-  </div>
-</div>
+      <p class="hero-summary">
+        IT professional with 11+ years of experience in BFSI and capital markets domains, specializing in wealth management platforms and regulatory-driven financial systems.
+        My expertise includes functional and business analysis, UAT coordination, requirement gathering, and stakeholder management across front-office, middle-office, and back-office processes.
+        <br><br/>
+        I have worked extensively on investment products such as equities, mutual funds, ETFs, and advisory platforms, ensuring system compliance with regulatory norms, operational accuracy, and seamless user experience.
+        I collaborate closely with business users, developers, and QA teams to translate complex financial requirements into scalable technology solutions.
+      </p>
+
+      <div class="hero-actions-row">
+        <a class="btn primary" href="Lakshmi_Niranjan_CV.pdf" target="_blank">
+          Download Resume
+        </a>
+
+        <div class="section-tabs">
+          <a href="#experience">Professional Experience</a>
+          <a href="#projects">Key Projects & Contributions</a>
+          <a href="#certifications">Certifications</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  <section>
+<section>
   <div class="container">
     <h2>Core IT Expertise</h2>
 
     <div class="it-grid">
-      <div class="it-card">
-        <h3>Business Analysis</h3>
-        <p>Requirement analysis, BRD/FSD creation, and solution alignment.</p>
-      </div>
-
-      <div class="it-card">
-        <h3>UAT Leadership</h3>
-        <p>Test strategy, execution, defect management, and sign-off.</p>
-      </div>
-
-      <div class="it-card">
-        <h3>Functional Grooming</h3>
-        <p>User stories, acceptance criteria, sprint support.</p>
-      </div>
-
-      <div class="it-card">
-        <h3>Process Mapping</h3>
-        <p>End-to-end flow analysis across BFSI systems.</p>
-      </div>
-
-      <div class="it-card">
-        <h3>Regulatory Compliance</h3>
-        <p>SEBI, exchange, and audit-driven implementations.</p>
-      </div>
-
-      <div class="it-card">
-        <h3>KPI & Audit Metrics</h3>
-        <p>Delivery governance and quality assurance.</p>
-      </div>
+      <div class="it-card"><h3>Business Analysis</h3><p>Requirement analysis, BRD/FSD creation, and solution alignment.</p></div>
+      <div class="it-card"><h3>UAT Leadership</h3><p>Test strategy, execution, defect management, and sign-off.</p></div>
+      <div class="it-card"><h3>Functional Grooming</h3><p>User stories, acceptance criteria, sprint support.</p></div>
+      <div class="it-card"><h3>Process Mapping</h3><p>End-to-end flow analysis across BFSI systems.</p></div>
+      <div class="it-card"><h3>Regulatory Compliance</h3><p>SEBI, exchange, and audit-driven implementations.</p></div>
+      <div class="it-card"><h3>KPI & Audit Metrics</h3><p>Delivery governance and quality assurance.</p></div>
     </div>
   </div>
 </section>
-
 
 <section id="experience">
   <div class="container">
