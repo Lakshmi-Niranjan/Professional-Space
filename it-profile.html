@@ -245,6 +245,19 @@ footer{
   .hero-inner{grid-template-columns:1fr;text-align:center}
   .hero-summary{text-align:left}
 }
+
+  .hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+/* keep tabs inline */
+.section-tabs {
+  margin-top: 0 !important;
+}
 </style>
 </head>
 
@@ -291,15 +304,17 @@ footer{
    I collaborate closely with business users, developers, and QA teams to translate complex financial requirements into scalable technology solutions. 
     </p>
       
-      <a href="Lakshmi_Niranjan_CV.pdf" class="download-btn" target="_blank">Download Resume</a>
+   <div class="hero-actions-row">
+  <a class="btn primary" href="Lakshmi_Niranjan_CV.pdf" target="_blank">
+    Download Resume
+  </a>
 
-      <div class="section-tabs">
-        <a href="#experience">Professional Experience</a>
-        <a href="#projects">Key Projects & Contributions</a>
-        <a href="#certifications">Certifications</a>
-      </div>
-    </div>
-
+  <div class="section-tabs">
+    <a href="#experience">Professional Experience</a>
+    <a href="#projects">Key Projects & Contributions</a>
+    <a href="#certifications">Certifications</a>
+  </div>
+</div>
   </div>
 </section>
 
