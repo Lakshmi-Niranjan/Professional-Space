@@ -188,42 +188,52 @@
   </div>
 
   <!-- SCRIPT -->
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const quotes = [
-        "The mind is everything. What you think you become.",
-        "Influence grows when actions speak before words.",
-        "Time in the market beats timing the market.",
-        "Knowledge compounds faster than money.",
-        "When your prayers are not answered, remember: The teacher doesn’t talk during the test.",
-        "Markets reward patience more than intelligence.",
-        "Clarity in thought leads to confidence in action.",
-        "Success is a journey, not a destination.",
-        "In life, direction is more important than speed.",
-        "Happiness is a state of mind.",
-        "Thinking starts success, doing completes it.",
-        "Trust the process, not the noise.",
-        "Your habits decide your future.",
-        "When life puts you in the dark, you are being planted—not buried."
-      ];
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const quotes = [
+      "The mind is everything. What you think you become.",
+      "When your prayers are not answered, remember: The teacher doesn’t talk during the test.",
+      "Influence grows when actions speak before words.",
+      "Time in the market beats timing the market.",
+      "Knowledge compounds faster than money.",
+      "Markets reward patience more than intelligence.",
+      "Clarity in thought leads to confidence in action.",
+      "Success is a journey, not a destination.",
+      "In life, direction is more important than speed.",
+      "Happiness is a state of mind.",
+      "Thinking starts success, doing completes it.",
+      "Trust the process, not the noise.",
+      "Your habits decide your future.",
+      "When life puts you in the dark, you are being planted—not buried."
+    ];
 
-      const today = new Date();
-      const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      };
+    // 🔒 FIXED START DATE (pick any meaningful date)
+    const startDate = new Date("2024-01-01");
 
-      const dateEl = document.getElementById("todayDate");
-      const quoteEl = document.getElementById("dailyQuote");
+    const today = new Date();
 
-      const quoteIndex = today.getDate() % quotes.length;
+    // Remove time component to avoid timezone issues
+    startDate.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
 
-      dateEl.innerText = today.toLocaleDateString("en-IN", options);
-      quoteEl.innerText = `Quote of the day : “${quotes[quoteIndex]}”`;
-    });
-  </script>
+    const msPerDay = 1000 * 60 * 60 * 24;
+    const totalDaysPassed = Math.floor((today - startDate) / msPerDay);
 
+    const quoteIndex = totalDaysPassed % quotes.length;
+
+    const options = {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    };
+
+    document.getElementById("todayDate").innerText =
+      today.toLocaleDateString("en-IN", options);
+
+    document.getElementById("dailyQuote").innerText =
+      `Quote of the day : “${quotes[quoteIndex]}”`;
+  });
+</script>
 </body>
 </html>
