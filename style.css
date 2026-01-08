@@ -861,6 +861,12 @@ ul.programs-list > li > p {
     padding-bottom: 36px;
   }
 }
+#contact a {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #93c5fd;
+}
+
 
 
 
