@@ -124,6 +124,37 @@
       opacity: 0.9;
     }
 
+    /* ======= GLOW EFFECT ADDED (NO EXISTING CODE CHANGED) ======= */
+
+    .quote-text {
+      text-shadow:
+        0 0 8px rgba(243, 255, 163, 0.35),
+        0 0 16px rgba(243, 255, 163, 0.25),
+        0 0 24px rgba(243, 255, 163, 0.15);
+      animation: quoteGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes quoteGlow {
+      0% {
+        text-shadow:
+          0 0 6px rgba(243, 255, 163, 0.25),
+          0 0 12px rgba(243, 255, 163, 0.18),
+          0 0 20px rgba(243, 255, 163, 0.12);
+      }
+      50% {
+        text-shadow:
+          0 0 10px rgba(243, 255, 163, 0.45),
+          0 0 22px rgba(243, 255, 163, 0.35),
+          0 0 36px rgba(243, 255, 163, 0.25);
+      }
+      100% {
+        text-shadow:
+          0 0 6px rgba(243, 255, 163, 0.25),
+          0 0 12px rgba(243, 255, 163, 0.18),
+          0 0 20px rgba(243, 255, 163, 0.12);
+      }
+    }
+
     /* MOBILE FIX */
     @media (max-width: 520px) {
       .launch-container {
