@@ -313,24 +313,26 @@ window.addEventListener("load", function () {
 
     document.body.appendChild(bubble);
 
+    // When user clicks the bubble
     bubble.addEventListener("click", function () {
       if (window.chatbase) {
         window.chatbase("open");
       }
-      bubble.remove();
+      bubble.remove(); // remove bubble only after click
     });
 
+    // Auto hide only if user didn't click
     setTimeout(() => {
-      bubble.style.opacity = "0";
-      setTimeout(() => bubble.remove(), 500);
-    }, 10000);
+      if (document.body.contains(bubble)) {
+        bubble.style.opacity = "0";
+        setTimeout(() => bubble.remove(), 500);
+      }
+    }, 12000); // show for 12 seconds
 
   },3000);
 
 });
 </script>
-
-</body>
 
 </body>
 </html>
