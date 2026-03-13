@@ -298,7 +298,7 @@ window.addEventListener("load", function () {
 
     bubble.style.position = "fixed";
     bubble.style.bottom = "90px";
-    bubble.style.right = "80px";
+    bubble.style.right = "90px";
     bubble.style.background = "#111827";
     bubble.style.color = "#ffffff";
     bubble.style.padding = "12px 14px";
@@ -314,15 +314,18 @@ window.addEventListener("load", function () {
     document.body.appendChild(bubble);
 
     function openChat() {
-      if (window.chatbase) {
-        window.chatbase("open");
+
+      // find the Chatbase widget button
+      const chatButton = document.querySelector("iframe");
+
+      if(chatButton){
+        chatButton.click();
       }
+
+      bubble.remove();
     }
 
-    // desktop click
     bubble.addEventListener("click", openChat);
-
-    // mobile tap
     bubble.addEventListener("touchstart", openChat);
 
     // auto hide if ignored
@@ -331,9 +334,9 @@ window.addEventListener("load", function () {
         bubble.style.opacity = "0";
         setTimeout(() => bubble.remove(), 400);
       }
-    }, 12000);
+    }, 20000);
 
-  },4000); // wait longer for chatbase to load
+  },4000);
 
 });
 </script>
