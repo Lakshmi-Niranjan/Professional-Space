@@ -315,14 +315,15 @@ window.addEventListener("load", function () {
 
     function openChat() {
 
-      // find the Chatbase widget button
-      const chatButton = document.querySelector("iframe");
+      if (window.chatbase && window.chatbase("getState") === "initialized") {
+        window.chatbase("open");
+        bubble.remove();
+      } else {
 
-      if(chatButton){
-        chatButton.click();
+        // try again shortly
+        setTimeout(openChat, 400);
+
       }
-
-      bubble.remove();
     }
 
     bubble.addEventListener("click", openChat);
@@ -334,7 +335,7 @@ window.addEventListener("load", function () {
         bubble.style.opacity = "0";
         setTimeout(() => bubble.remove(), 400);
       }
-    }, 20000);
+    }, 12000);
 
   },4000);
 
