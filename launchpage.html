@@ -294,7 +294,7 @@ window.addEventListener("load", function () {
   setTimeout(function(){
 
     const bubble = document.createElement("div");
-    bubble.innerHTML = "👋 Hi, I'm <b>Niru AI</b><br>Ask me about Lakshmi Niranjan’s experience.";
+    bubble.innerHTML = "👋 Hi, I'm <b>Niru AI</b><br>Click the chat icon to ask me about Lakshmi Niranjan.";
 
     bubble.style.position = "fixed";
     bubble.style.bottom = "90px";
@@ -313,23 +313,10 @@ window.addEventListener("load", function () {
 
     document.body.appendChild(bubble);
 
-    function openChat() {
+    bubble.addEventListener("click", function () {
+      bubble.remove();
+    });
 
-      if (window.chatbase && window.chatbase("getState") === "initialized") {
-        window.chatbase("open");
-        bubble.remove();
-      } else {
-
-        // try again shortly
-        setTimeout(openChat, 400);
-
-      }
-    }
-
-    bubble.addEventListener("click", openChat);
-    bubble.addEventListener("touchstart", openChat);
-
-    // auto hide if ignored
     setTimeout(() => {
       if (document.body.contains(bubble)) {
         bubble.style.opacity = "0";
