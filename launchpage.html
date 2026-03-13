@@ -297,8 +297,8 @@ window.addEventListener("load", function () {
     bubble.innerHTML = "👋 Hi, I'm <b>Niru AI</b><br>Ask me about Lakshmi Niranjan’s experience.";
 
     bubble.style.position = "fixed";
-    bubble.style.bottom = "95px";
-    bubble.style.right = "95px";
+    bubble.style.bottom = "90px";
+    bubble.style.right = "80px";
     bubble.style.background = "#111827";
     bubble.style.color = "#ffffff";
     bubble.style.padding = "12px 14px";
@@ -313,26 +313,29 @@ window.addEventListener("load", function () {
 
     document.body.appendChild(bubble);
 
-    // When user clicks the bubble
-    bubble.addEventListener("click", function () {
+    function openChat() {
       if (window.chatbase) {
         window.chatbase("open");
       }
-      bubble.remove(); // remove bubble only after click
-    });
+    }
 
-    // Auto hide only if user didn't click
+    // desktop click
+    bubble.addEventListener("click", openChat);
+
+    // mobile tap
+    bubble.addEventListener("touchstart", openChat);
+
+    // auto hide if ignored
     setTimeout(() => {
       if (document.body.contains(bubble)) {
         bubble.style.opacity = "0";
-        setTimeout(() => bubble.remove(), 500);
+        setTimeout(() => bubble.remove(), 400);
       }
-    }, 12000); // show for 12 seconds
+    }, 12000);
 
-  },3000);
+  },4000); // wait longer for chatbase to load
 
 });
 </script>
-
 </body>
 </html>
