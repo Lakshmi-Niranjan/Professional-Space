@@ -270,50 +270,34 @@
 
 <!-- Niru AI Chatbot -->
 <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="IDXJ1SSoAoNHccYp0JEZM";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-
-<!-- Niru AI Greeting Bubble -->
-<script>
-window.addEventListener("load", function () {
-
-  setTimeout(function(){
-
-    const bubble = document.createElement("div");
-    bubble.innerHTML = "👋 Hi, I'm <b>Niru AI</b><br>Click the chat icon to ask me about Lakshmi Niranjan.";
-
-    bubble.style.position = "fixed";
-    bubble.style.bottom = "120px";
-    bubble.style.right = "90px";
-    bubble.style.background = "#111827";
-    bubble.style.color = "#ffffff";
-    bubble.style.padding = "12px 14px";
-    bubble.style.borderRadius = "12px";
-    bubble.style.fontSize = "13px";
-    bubble.style.lineHeight = "1.4";
-    bubble.style.boxShadow = "0 10px 24px rgba(0,0,0,0.35)";
-    bubble.style.cursor = "pointer";
-    bubble.style.zIndex = "9999";
-    bubble.style.maxWidth = "240px";
-    bubble.style.fontFamily = "Poppins, sans-serif";
-
-    document.body.appendChild(bubble);
-
-    bubble.addEventListener("click", function () {
-      bubble.remove();
-    });
-
-    setTimeout(() => {
-      if (document.body.contains(bubble)) {
-        bubble.style.opacity = "0";
-        setTimeout(() => bubble.remove(), 400);
-      }
-    }, 12000);
-
-  },4000);
-
+(function(){
+if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+window.chatbase = (...arguments) => {
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase = new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){return target.q}
+return (...args)=>target(prop,...args)
+}
 });
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="IDXJ1SSoAoNHccYp0JEZM";
+script.domain="www.chatbase.co";
+document.body.appendChild(script);
+};
+if(document.readyState==="complete"){
+onLoad();
+}else{
+window.addEventListener("load",onLoad);
+}
+})();
 </script>
 
+</body>
 </body>
 </html>
