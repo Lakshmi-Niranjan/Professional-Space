@@ -277,5 +277,15 @@
 id="IDXJ1SSoAoNHccYp0JEZM"
 defer>
 </script>
+
+<script>
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    if (window.chatbase) {
+      window.chatbase("open");
+    }
+  }, 2000);
+});
+</script>
 </body>
 </html>
