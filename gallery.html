@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/Professional-Space/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Professional-Space/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Professional-Space/favicon.png">
+
+  <meta charset="UTF-8" />
+  <title>Gallery | Lakshmi Niranjan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
 
 <style>
     body {
@@ -120,8 +133,8 @@
     /* FEATURED YOUTUBE SECTION */
 
     .youtube-section {
-      max-width: 760px;
-      margin: 55px auto 20px;
+      max-width: 620px;
+      margin: 35px auto 20px;
       padding: 0 16px;
       text-align: center;
     }
@@ -142,7 +155,7 @@
 
     .youtube-card {
       display: block;
-      max-width: 560px;
+      max-width: 420px;
       margin: 0 auto;
       overflow: hidden;
       text-align: left;
@@ -161,14 +174,29 @@
     }
 
     .youtube-thumbnail {
+      position: relative;
       aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, #172554, #312e81, #020617);
+      overflow: hidden;
+      background: #020617;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    .youtube-thumbnail img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .youtube-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -179,10 +207,11 @@
       color: #fff;
       font-size: 1.4rem;
       transition: transform 0.2s ease;
+      z-index: 1;
     }
 
     .youtube-card:hover .youtube-play {
-      transform: scale(1.08);
+      transform: translate(-50%, -50%) scale(1.08);
     }
 
     .youtube-info {
@@ -380,18 +409,22 @@
   </p>
 
   <a
-    href="YOUR_YOUTUBE_VIDEO_LINK"
+    href="https://www.youtube.com/watch?v=BVxdy07b0Ww&amp;t=245s"
     class="youtube-card"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Watch my featured video on YouTube"
   >
     <div class="youtube-thumbnail">
-      <span class="youtube-play">▶</span>
+      <img
+        src="https://img.youtube.com/vi/BVxdy07b0Ww/hqdefault.jpg"
+        alt="Lakshmi Niranjan featured on YouTube"
+      >
+      <span class="youtube-play" aria-hidden="true">▶</span>
     </div>
 
     <div class="youtube-info">
-      <h3>https://www.youtube.com/watch?v=BVxdy07b0Ww&t=245s</h3>
+      <h3>Featured conversation on financial awareness</h3>
       <span class="youtube-watch">▶ Watch on YouTube</span>
     </div>
   </a>
