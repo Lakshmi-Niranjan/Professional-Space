@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/Professional-Space/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/Professional-Space/favicon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/Professional-Space/favicon.png">
 
-  <meta charset="UTF-8" />
-  <title>Gallery | Lakshmi Niranjan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
+<style>
     body {
       padding-top: 72px;
       background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617);
@@ -103,25 +90,23 @@
     }
 
     .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 12px;        /* slightly more padding */
-  font-size: 0.85rem;       /* ⬅ increased */
-  font-weight: 600;         /* ⬅ bold */
-  background: linear-gradient(
-    to top,
-    rgba(2, 6, 23, 0.85),
-    rgba(2, 6, 23, 0.1)
-  );
-  color: #F3FFA3;            /* ⬅ requested colour */
-  border-radius: 0 0 18px 18px;
-  text-align: center;
-  letter-spacing: 0.4px;
-  z-index: 2;
-}
-
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(
+        to top,
+        rgba(2, 6, 23, 0.85),
+        rgba(2, 6, 23, 0.1)
+      );
+      color: #F3FFA3;
+      border-radius: 0 0 18px 18px;
+      text-align: center;
+      letter-spacing: 0.4px;
+      z-index: 2;
     }
 
     .gallery-note {
@@ -129,6 +114,91 @@
       font-size: 0.8rem;
       color: #F3FFA3 !important;
       margin-top: 16px;
+      font-weight: 500;
+    }
+
+    /* FEATURED YOUTUBE SECTION */
+
+    .youtube-section {
+      max-width: 760px;
+      margin: 55px auto 20px;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    .youtube-title {
+      color: #F3FFA3;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .youtube-description {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .youtube-card {
+      display: block;
+      max-width: 560px;
+      margin: 0 auto;
+      overflow: hidden;
+      text-align: left;
+      text-decoration: none;
+      color: #fff;
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .youtube-card:hover {
+      transform: translateY(-4px);
+      border-color: #F3FFA3;
+    }
+
+    .youtube-thumbnail {
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #172554, #312e81, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .youtube-play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 46px;
+      border-radius: 14px;
+      background: #ff0033;
+      color: #fff;
+      font-size: 1.4rem;
+      transition: transform 0.2s ease;
+    }
+
+    .youtube-card:hover .youtube-play {
+      transform: scale(1.08);
+    }
+
+    .youtube-info {
+      padding: 18px 20px 20px;
+    }
+
+    .youtube-info h3 {
+      color: #F3FFA3;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+
+    .youtube-watch {
+      color: #93c5fd;
+      font-size: 0.85rem;
       font-weight: 500;
     }
 
@@ -143,7 +213,22 @@
         padding: 6px 8px;
       }
     }
-  </style>
+
+    @media (max-width: 600px) {
+      .youtube-section {
+        margin-top: 40px;
+      }
+
+      .youtube-title {
+        font-size: 1.3rem;
+      }
+
+      .youtube-info {
+        padding: 15px;
+      }
+    }
+</style>
+
 </head>
 
 <body>
@@ -286,6 +371,31 @@
  <p class="gallery-note" style="color:#F3FFA3; text-align:center;">
   *Note : Selected moments from Investor Awareness, Financial Literacy and other Programs conducted (2025,2026)
 </p>
+
+<!-- FEATURED YOUTUBE SECTION -->
+<section class="youtube-section">
+  <h2 class="youtube-title">Featured on YouTube</h2>
+  <p class="youtube-description">
+    A featured conversation on financial awareness and education.
+  </p>
+
+  <a
+    href="YOUR_YOUTUBE_VIDEO_LINK"
+    class="youtube-card"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Watch my featured video on YouTube"
+  >
+    <div class="youtube-thumbnail">
+      <span class="youtube-play">▶</span>
+    </div>
+
+    <div class="youtube-info">
+      <h3>https://www.youtube.com/watch?v=BVxdy07b0Ww&t=245s</h3>
+      <span class="youtube-watch">▶ Watch on YouTube</span>
+    </div>
+  </a>
+</section>
 
 </body>
 </html>
