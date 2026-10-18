@@ -27,6 +27,91 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Training Impact Dashboard: matches the existing Poppins, navy, lime and blue theme -->
+  <style>
+    .training-impact {
+      margin: 0 0 30px;
+    }
+
+    .training-impact-heading {
+      margin: 0 0 16px;
+      color: #F3FFA3;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .training-impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .training-impact-card {
+      min-width: 0;
+      padding: 22px 16px;
+      text-align: center;
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(147, 197, 253, 0.16);
+      border-radius: 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .training-impact-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(147, 197, 253, 0.55);
+    }
+
+    .training-impact-number {
+      display: block;
+      margin-bottom: 7px;
+      color: #F3FFA3;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .training-impact-label {
+      display: block;
+      color: #93c5fd;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .training-impact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .training-impact-card {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 16px;
+        text-align: left;
+      }
+
+      .training-impact-number {
+        min-width: 90px;
+        margin: 0;
+        font-size: 1.7rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .training-impact-card {
+        transition: none;
+      }
+
+      .training-impact-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -219,6 +304,29 @@
         <h2 class="section-title" style="color:#F3FFA3;">
           Programs Conducted
         </h2>
+
+        <!-- TRAINING IMPACT DASHBOARD
+             Replace the XX+ placeholders with verified totals before publishing. -->
+        <div class="training-impact" aria-label="Training impact at a glance">
+          <h3 class="training-impact-heading">Training Impact at a Glance</h3>
+
+          <div class="training-impact-grid">
+            <div class="training-impact-card">
+              <span class="training-impact-number">50+</span>
+              <span class="training-impact-label">Sessions Conducted</span>
+            </div>
+
+            <div class="training-impact-card">
+              <span class="training-impact-number">30+</span>
+              <span class="training-impact-label">Organisations Covered</span>
+            </div>
+
+            <div class="training-impact-card">
+              <span class="training-impact-number">2500+</span>
+              <span class="training-impact-label">Participants Reached</span>
+            </div>
+          </div>
+        </div>
 
         <ul class="programs-list">
           <li>
