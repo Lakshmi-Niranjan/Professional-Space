@@ -308,18 +308,45 @@ section h2::after{
 .it-card p{color:#cbd5f5}
 
 /* CERTIFICATIONS */
-.cert-badge{
-  padding:14px 18px;
-  border-radius:999px;
-  background:rgba(15,23,42,.9);
-  border:1px solid rgba(148,163,184,.35);
-  text-align:center;
-  transition:all .35s ease;
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, .9);
+  border: 1px solid rgba(148, 163, 184, .35);
+  text-align: center;
+  line-height: 1.5;
+
+  transition: all .35s ease;
 }
-.cert-badge:hover{
-  transform:translateY(-4px) scale(1.04);
-  box-shadow:0 16px 40px rgba(249,115,22,.4);
-  border-color:rgba(249,115,22,.7);
+
+/* Certification Title */
+.cert-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f4f7ff;
+}
+
+/* Certification Date / Supporting Text */
+.cert-year {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #72b7ff;
+  letter-spacing: .3px;
+  line-height: 1.4;
+}
+
+/* Existing Hover Effect — Retained */
+.cert-badge:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(249, 115, 22, .4);
+  border-color: rgba(249, 115, 22, .7);
 }
 
 /* FOOTER */
@@ -692,64 +719,68 @@ footer{
     <div class="it-grid">
 
       <div class="cert-badge">
-        NISM Certified Research Analyst
+        <span class="cert-title">NISM Certified Research Analyst</span>
         <span class="cert-year">December 2029</span>
       </div>
 
       <div class="cert-badge">
-        SEBI SMART Trainer
+        <span class="cert-title">SEBI SMART Trainer</span>
         <span class="cert-year">January 2029</span>
       </div>
 
       <div class="cert-badge">
-        NISM Commodity Derivatives
-        <span class="cert-year">Mar 2028</span>
+        <span class="cert-title">NISM Commodity Derivatives</span>
+        <span class="cert-year">March 2028</span>
       </div>
 
       <div class="cert-badge">
-        NISM Certified Mutual Fund Distributor
+        <span class="cert-title">NISM Certified Mutual Fund Distributor</span>
         <span class="cert-year">October 2029</span>
       </div>
 
       <div class="cert-badge">
-        NSE Certified Capital Market Professional Plus
-        <span class="cert-year">Online certification program</span>
+        <span class="cert-title">NSE Certified Capital Market Professional Plus</span>
+        <span class="cert-year">Online Certification Program</span>
       </div>
 
       <div class="cert-badge">
-        NSE Certified Investment Analyst Champion
-        <span class="cert-year">Proficiency-level certificate</span>
+        <span class="cert-title">NSE Certified Investment Analyst Champion</span>
+        <span class="cert-year">Proficiency-Level Certificate</span>
       </div>
 
       <div class="cert-badge">
-        NSE Certified Market Professional — Level III
-        <span class="cert-year">Comprising 7-Modules</span>
+        <span class="cert-title">NSE Certified Market Professional — Level III</span>
+        <span class="cert-year">Comprising 7 Modules</span>
       </div>
 
       <div class="cert-badge">
-        IIBF Certified Banking & AML Professional
+        <span class="cert-title">IIBF Certified Banking &amp; AML Professional</span>
         <span class="cert-year">Individual Modules</span>
       </div>
 
       <div class="cert-badge">
-        Six Sigma Green Belt
-        <span class="cert-year">From AIGPE</span>
+        <span class="cert-title">Six Sigma Green Belt</span>
+        <span class="cert-year">AIGPE</span>
       </div>
 
-       <div class="cert-badge">
-        Diploma in Software Testing
+      <div class="cert-badge">
+        <span class="cert-title">Diploma in Software Testing</span>
         <span class="cert-year">Amitysoft</span>
       </div>
 
       <div class="cert-badge">
-        IIBA - Certification of Capability in Business Analysis
-        <span class="cert-year">Techcanvass Prep Course</span>
+        <span class="cert-title">IIBA Certification of Capability in Business Analysis</span>
+        <span class="cert-year">Techcanvass Preparation Course</span>
       </div>
 
       <div class="cert-badge">
-        Personal & Family Financial Planning
+        <span class="cert-title">Personal &amp; Family Financial Planning</span>
         <span class="cert-year">University of Florida</span>
       </div>
+
+    </div>
+  </div>
+</section>
 
     </div>
   </div>
